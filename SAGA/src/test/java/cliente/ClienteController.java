@@ -7,7 +7,7 @@ public class ClienteController {
     Map<String,Cliente> mapaCliente;
 
     public ClienteController(){
-        mapaCliente = new LinkedHashMap<String, Cliente>();
+        mapaCliente = new LinkedHashMap<>();
     }
 
     public String inserirCliente(String CPF, Cliente cliente){
@@ -24,13 +24,13 @@ public class ClienteController {
         return mapaCliente.get(CPF).toString();
     }
 
-    public String representacaoTextualDeTodosOsClientes(String CPF){
+    public String representacaoTextualDeTodosOsClientes(){
         String retornoTotal = "";
         for (String i: mapaCliente.keySet()){
             retornoTotal += mapaCliente.get(i).toString() + " | ";
         }
-        if (retornoTotal != "") {
-            return retornoTotal.substring(0, retornoTotal.length()-1);
+        if (!retornoTotal.equals("")) {
+            return retornoTotal.substring(0, retornoTotal.length()-2);
         }else{
             return  retornoTotal;
         }
