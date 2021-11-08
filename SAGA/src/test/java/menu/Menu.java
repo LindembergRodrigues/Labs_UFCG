@@ -44,7 +44,9 @@ public class Menu {
     }
 
     private static void produto(Scanner in, ProdutoController produtoController) {
+        while(true) {
 
+            }
     }
 
     private static void fornecedor(Scanner in, FornecedorController fornecedorController) {
